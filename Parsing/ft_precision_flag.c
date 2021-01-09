@@ -1,6 +1,6 @@
 #include "../Include/ft_printf.h"
 
-char *ft_precision_flag(const char *format, t_flags *flags, va_list ap)
+const char *ft_precision_flag(const char *format, t_flags *flags, va_list ap)
 {
     if (*format == '*')
     {

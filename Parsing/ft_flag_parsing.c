@@ -1,13 +1,13 @@
 #include "../Include/ft_printf.h"
 
-char *ft_flag_parsing(const char *format, t_flags *flags, va_list ap)
+const char *ft_flag_parsing(const char *format, t_flags *flags, va_list ap)
 {
-    while(*format++)
+    while(*format)
     {
         if (*format == '0' && flags->width == 0 && flags->minus == 0)
             flags->zero = 1;
         if (*format == '.')
-            format = ft_precision_flag(++format, &flags, ap);
+            format = ft_precision_flag(++format, flags, ap);
         if (*format == '-')
             *flags = ft_minus_flag(*flags);
         if (*format == '*')
@@ -19,6 +19,8 @@ char *ft_flag_parsing(const char *format, t_flags *flags, va_list ap)
             flags->type = *format;
             break;
         }
+        format++;
+        //(*len)++;
     }
     return (format);
 }
