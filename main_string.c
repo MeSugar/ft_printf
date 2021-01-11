@@ -6,15 +6,15 @@ int main()
     int a;
     int b;
     char c[] = "abc";
-    char d[] = "opq";
-    a = printf("1 o: %6.4s\n2 o: %-5s\n", c, d);
-    printf("o int: %d\n\n", a);
+ //   char d[] = "opq";
+    a = printf("%-7.6s1\n", c);
+    printf("%d\n\n", a);
     //printf("2:%-2c\n", c);
     //printf("3: %.3c\n", c);
     //printf("4:%3c\n", c);
 
-    b = ft_printf("1 m: %6.4s\n2 m: %-5s\n", c, d);
-    printf("m int: %d\n\n", b);
+    b = ft_printf("%-7.6s1\n", c);
+    printf("%d\n\n", b);
 
     return (0);
 }
