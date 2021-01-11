@@ -54,7 +54,7 @@ char				*ft_itoa(int n);
 char				**ft_split(char const *s, char c);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int					ft_putchar(char c);
-int					ft_putstr(char *s);
+int					ft_putnstr(char *s, int len);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
 t_list				*ft_lstnew(void *content);
