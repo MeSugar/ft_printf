@@ -20,7 +20,6 @@ const char *ft_flag_parsing(const char *format, t_flags *flags, va_list ap)
             break;
         }
         format++;
-        //(*len)++;
     }
     return (format);
 }

@@ -21,9 +21,11 @@ t_flags ft_width_asterisk_flag(t_flags flags, va_list ap);
 t_flags ft_width_digit_flag(const char *format, t_flags flags);
 int     ft_type_check(const char *format);
 int ft_variable_treatment(int format, t_flags flags, va_list ap);
-int ft_fill_width (int width, int string_width, int flag_zero);
 int ft_char_treatment(t_flags flags, va_list ap);
 int ft_string_treatment(t_flags flags, va_list ap);
+int ft_fill_width (int width, int string_width, int flag_zero);
+int ft_pointer_treatment(t_flags flags, va_list ap);
+char *ft_u_long_base(unsigned long u_long, int base);
 
 
 
