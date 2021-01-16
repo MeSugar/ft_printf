@@ -11,5 +11,7 @@ int ft_variable_treatment(int format, t_flags flags, va_list ap)
         len += ft_string_treatment(flags, ap);
     if (format == 'p')
         len += ft_pointer_treatment(flags, ap);
+    if (format == 'd' || format == 'i')
+        len += ft_integer_treatment(flags, ap);
     return (len);
 }
