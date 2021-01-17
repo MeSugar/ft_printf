@@ -1,6 +1,6 @@
 #include "../Include/ft_printf.h"
 
-static int ft_string_len(unsigned long u_long, int base)
+static int ft_string_len(long u_long, int base)
 {
     int string_len;
 
@@ -13,7 +13,7 @@ static int ft_string_len(unsigned long u_long, int base)
     return (string_len);
 }
 
-char *ft_u_long_base(unsigned long u_long, int base)
+char *ft_u_long_base(long u_long, int base)
 {
     char *str;
     int string_len;
