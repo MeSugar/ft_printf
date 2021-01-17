@@ -21,14 +21,18 @@ int     ft_format_treatment(const char *format, va_list ap)
     len = 0;
     while (*format)
     {
-        if (*format != '%')
+        flags = ft_flags_initialization();
+        if (!(*format))
+            break;
+        else if (*format != '%')
             len += ft_putchar(*format);
-        if (*format == '%' && *(format + 1))
+        else if (*format == '%' && *(format + 1))
         {
-            flags = ft_flags_initialization();
             format = ft_flag_parsing(++format, &flags, ap);
             if (ft_type_check(format))
                 len += ft_variable_treatment((char)flags.type, flags, ap);
+            else if (*format)
+                len += ft_putchar(*format);
         }
         format++;
     }

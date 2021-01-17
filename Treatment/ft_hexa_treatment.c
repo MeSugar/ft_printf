@@ -14,8 +14,20 @@ static	int	ft_fill_u_integer(char *str, t_flags flags, int string_len)
 		len += ft_putnstr(str, string_len);
 	return (len);
 }
+static char *ft_str_toupper(char *str)
+{
+    int i;
 
-int ft_u_integer_treatment(t_flags flags, va_list ap)
+    i = 0;
+    while (str[i])
+    {
+        str[i] = ft_toupper(str[i]);
+        i++;
+    }
+    return (str);
+}
+
+int ft_hexa_treatment(t_flags flags, va_list ap, int capital)
 {
     int len;
     unsigned int nbr;
@@ -26,8 +38,10 @@ int ft_u_integer_treatment(t_flags flags, va_list ap)
     nbr = (unsigned int)(va_arg(ap, unsigned int) + 4294967295 + 1);
     if (nbr == 0 && flags.precision == 0)
         return (len+= ft_fill_width(flags.width, 0, 0));
-    if (!(str = ft_itoa_base((unsigned long)nbr, 10)))
+    if (!(str = ft_u_long_base((unsigned long)nbr, 16)))
         return (0);
+    if (capital)
+        str = ft_str_toupper(str);
     string_len = ft_strlen(str);
     if (flags.minus == 1)
         len += ft_fill_u_integer(str, flags, string_len);
