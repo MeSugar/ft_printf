@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 int ft_type_check(const char *format)
 {

@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 int ft_char_treatment(t_flags flags, va_list ap, char format)
 {

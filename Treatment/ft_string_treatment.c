@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 static int  ft_fill_string(char *str, t_flags flags, int string_len)
 {

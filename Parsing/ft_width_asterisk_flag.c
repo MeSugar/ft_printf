@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 t_flags ft_width_asterisk_flag(t_flags flags, va_list ap)
 {

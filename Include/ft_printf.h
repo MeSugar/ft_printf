@@ -1,5 +1,5 @@
-#ifndef FT_PRINTF_HEADER_H
-# define FT_PRINTF_HEADER_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include <stdarg.h>
 # include "../Libft/libft.h"
 
@@ -30,6 +30,5 @@ int ft_integer_treatment(t_flags flags, va_list ap);
 char *ft_itoa_base(long nbr, int base);
 int ft_u_integer_treatment(t_flags flags, va_list ap);
 int ft_hexa_treatment(t_flags flags, va_list ap, int capital);
-
 
 #endif

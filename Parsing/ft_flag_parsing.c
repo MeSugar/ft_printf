@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 const char *ft_flag_parsing(const char *format, t_flags *flags, va_list ap)
 {

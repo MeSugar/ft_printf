@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 int ft_fill_width (int width, int string_width, int flag_zero)
 {

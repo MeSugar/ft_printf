@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 t_flags ft_width_digit_flag(const char *format, t_flags flags)
 {

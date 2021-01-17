@@ -1,4 +1,4 @@
-#include "../Include/ft_printf.h"
+#include "ft_printf.h"
 
 static int ft_string_len(unsigned long u_long, int base)
 {
