@@ -4,7 +4,7 @@ CFLAGS		=	-c -Wall -Wextra -Werror
 
 CC			=	gcc
 
-HEADER_PATH =	/Include
+HEADER_PATH =	./Include
 
 LIBFT		=	libft.a
 
