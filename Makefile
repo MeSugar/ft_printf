@@ -24,7 +24,7 @@ all : $(NAME)
 $(NAME): $(OBJS)
 	$(MAKE) -C $(LIBFT_PATH)
 	cp $(LIBFT_PATH)/$(LIBFT) $(NAME)
-	$(CC) $(CFLAGS) -I $(HEADER_PATH) $(SRCS)
+	$(CC) $(CFLAGS) -I$(HEADER_PATH) $(SRCS)
 	ar -rcs $(NAME) $(OBJS)
 
 clean :
