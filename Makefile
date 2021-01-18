@@ -24,7 +24,7 @@ O_SRCS		=	ft_printf.o \
 				ft_fill_width.o ft_u_long_base.o ft_pointer_treatment.o \
 				ft_integer_treatment.o ft_itoa_base.o ft_u_integer_treatment.o ft_hexa_treatment.o
 
-OBJS			=	$(SRC:.o=.o)
+OBJS		=	$(SRC:.o=.o)
 
 all : $(NAME)
 
