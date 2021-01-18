@@ -25,7 +25,7 @@ $(NAME): $(OBJS)
 	$(MAKE) -C $(LIBFT_PATH)
 	cp $(LIBFT_PATH)/$(LIBFT) ./$(NAME)
 	$(CC) $(CFLAGS) -I $(HEADER_PATH) $(SRCS)
-	ar rcs $(NAME) $(OBJS)
+	ar rc $(NAME) $(OBJS)
 
 clean :
 	$(MAKE) clean -C $(LIBFT_PATH)
