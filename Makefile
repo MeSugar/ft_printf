@@ -8,7 +8,7 @@ HEADER_PATH =	./Include
 
 LIBFT		=	libft.a
 
-LIBFT_PATH	=	./Libft
+LIBFT_PATH	=	Libft
 
 SRCS		= ft_printf.c \
 				Parsing/ft_flag_parsing.c Parsing/ft_minus_flag.c Parsing/ft_precision_flag.c \
@@ -30,9 +30,9 @@ all : $(NAME)
 
 $(NAME): $(OBJS)
 	$(MAKE) -C $(LIBFT_PATH)
-	cp $(LIBFT_PATH)/$(LIBFT) ./$(NAME)
+	cp $(LIBFT_PATH)/$(LIBFT) $(NAME)
 	$(CC) $(CFLAGS) -I $(HEADER_PATH) $(SRCS)
-	ar -rcs $(NAME) $(OBJS)
+	ar rcs $(NAME) $(OBJS)
 
 clean :
 	$(MAKE) clean -C $(LIBFT_PATH)
