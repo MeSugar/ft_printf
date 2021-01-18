@@ -23,7 +23,7 @@ int ft_u_integer_treatment(t_flags flags, va_list ap)
     int string_len;
 
     len = 0;
-    nbr = (unsigned int)(va_arg(ap, unsigned int) + 4294967295 + 1);
+    nbr = (va_arg(ap, unsigned int));
     if (nbr == 0 && flags.precision == 0)
         return (len+= ft_fill_width(flags.width, 0, 0));
     if (!(str = ft_itoa_base((unsigned long)nbr, 10)))

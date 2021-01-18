@@ -35,7 +35,7 @@ int ft_hexa_treatment(t_flags flags, va_list ap, int capital)
     int string_len;
 
     len = 0;
-    nbr = (unsigned int)(va_arg(ap, unsigned int) + 4294967295 + 1);
+    nbr = (va_arg(ap, unsigned int));
     if (nbr == 0 && flags.precision == 0)
         return (len+= ft_fill_width(flags.width, 0, 0));
     if (!(str = ft_u_long_base((unsigned long)nbr, 16)))
@@ -50,7 +50,7 @@ int ft_hexa_treatment(t_flags flags, va_list ap, int capital)
     else if (flags.precision > 0)
         len += ft_fill_width(flags.width, string_len, 0);
     else if (flags.precision == 0)
-        len += ft_fill_width(flags.width, 1, 0);
+        len += ft_fill_width(flags.width, string_len, 0);
     else
         len += ft_fill_width(flags.width, string_len, flags.zero);
     if (flags.minus == 0)

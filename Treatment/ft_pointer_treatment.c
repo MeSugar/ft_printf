@@ -20,7 +20,7 @@ static	int	ft_fill_pointer(char *str, t_flags flags, int string_len)
 	len += ft_putnstr("0x", 2);
 	if (flags.precision >= 0)
 	{
-		len += ft_fill_width(flags.precision, string_len, flags.zero);
+		len += ft_fill_width(flags.precision, string_len, 1);
 		len += ft_putnstr(str, flags.precision);
 	}
 	else
@@ -39,15 +39,20 @@ int			ft_pointer_treatment(t_flags flags, va_list ap)
 	u_long = (size_t)va_arg(ap, void*);
 	if (u_long == 0 && flags.precision == 0)
 	{
+		len += ft_fill_width(flags.width - 2, 0, flags.zero);
 		len += ft_putnstr("0x", 2);
-		return (len += ft_fill_width(flags.width, 0, 1));
+		return (len);
 	}
 	str = ft_u_long_base(u_long, 16);
 	string_len = ft_strlen(str);
 	if (flags.minus == 1)
 		len += ft_fill_pointer(str, flags, string_len);
 	if (flags.precision >= 0)
-		len += ft_fill_width(flags.width, flags.precision, flags.zero);
+	{
+		if (string_len > flags.precision)
+			flags.precision = string_len;
+		len += ft_fill_width(flags.width - 2, flags.precision, flags.zero);
+	}
 	else
 		len += ft_fill_width(flags.width - 2, string_len, flags.zero);
 	if (flags.minus == 0)

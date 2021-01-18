@@ -1,4 +1,5 @@
 #include "ft_printf.h"
+#include <stdio.h>
 
 t_flags ft_flags_initialization(void)
 {
@@ -17,7 +18,7 @@ int     ft_format_treatment(const char *format, va_list ap)
 {
     int len;
     t_flags flags;
-
+    
     len = 0;
     while (*format)
     {
@@ -28,7 +29,11 @@ int     ft_format_treatment(const char *format, va_list ap)
             len += ft_putchar(*format);
         else if (*format == '%' && *(format + 1))
         {
-            format = ft_flag_parsing(++format, &flags, ap);
+            if (*(format + 1) == ' ' || *(format + 1) == ',')
+                len += ft_putchar(*format);
+            format = ft_flag_parsing(++format, &flags, ap, &len);
+            if (!format)
+                return (0);
             if (ft_type_check(format))
                 len += ft_variable_treatment((char)flags.type, flags, ap);
             else if (*format)
@@ -43,7 +48,7 @@ int ft_printf(const char *format, ...)
 {
     va_list ap;
     int len;
-
+    
     len = 0;
     va_start(ap, format);
     len += ft_format_treatment(format, ap);

@@ -11,7 +11,7 @@ static	int	ft_fill_integer(char *str, t_flags flags, int string_len, int nbr)
             len--; 
         len += ft_putnstr("-", 1);
     }
-	if (flags.precision >= 0)
+	if (flags.precision > 0)
 	{
 		len += ft_fill_width(flags.precision, string_len, 1);
 		len += ft_putnstr(str, string_len);
@@ -66,7 +66,11 @@ int ft_integer_treatment(t_flags flags, va_list ap)
         len += ft_fill_width(flags.width, string_len, 0);
     }
     else if (flags.precision == 0)
-        len += ft_fill_width(flags.width, 1, 0);
+    {
+        if (nbr < 0)
+            flags.width--;
+        len += ft_fill_width(flags.width, string_len, 0);
+    }
     else
     {
         if (nbr < 0)
