@@ -22,7 +22,7 @@ OBJS			=	$(SRC:.c=.o)
 all : $(NAME)
 
 $(NAME): $(OBJS)
-	$(MAKE) bonus -C $(LIBFT_PATH)
+	$(MAKE) -C $(LIBFT_PATH)
 	cp $(LIBFT_PATH)/$(LIBFT) $(NAME)
 	$(CC) $(CFLAGS) -I $(HEADER_PATH) $(SRCS)
 	ar -rcs $(NAME) $(OBJS)
