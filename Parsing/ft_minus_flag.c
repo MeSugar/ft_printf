@@ -1,8 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_minus_flag.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gdelta <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/01/19 23:25:22 by gdelta            #+#    #+#             */
+/*   Updated: 2021/01/19 23:25:51 by gdelta           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_printf.h"
 
-t_flags ft_minus_flag(t_flags flags)
+t_flags	ft_minus_flag(t_flags flags)
 {
-    flags.minus = 1;
-    flags.zero = 0;
-    return (flags);
+	flags.minus = 1;
+	flags.zero = 0;
+	return (flags);
 }

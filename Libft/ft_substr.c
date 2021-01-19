@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, int start, int len)
 {
 	char	*str;
-	int	i;
+	int		i;
 
 	if (!s)
 		return (0);
