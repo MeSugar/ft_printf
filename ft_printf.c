@@ -29,9 +29,10 @@ int     ft_format_treatment(const char *format, va_list ap)
             len += ft_putchar(*format);
         else if (*format == '%' && *(format + 1))
         {
-            if (*(format + 1) == ' ' || *(format + 1) == ',')
+            format++;
+            if (*format == ' ')
                 len += ft_putchar(*format);
-            format = ft_flag_parsing(++format, &flags, ap, &len);
+            format = ft_flag_parsing(format, &flags, ap, &len);
             if (!format)
                 return (0);
             if (ft_type_check(format))

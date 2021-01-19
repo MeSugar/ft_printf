@@ -36,7 +36,7 @@ int ft_u_integer_treatment(t_flags flags, va_list ap)
     else if (flags.precision > 0)
         len += ft_fill_width(flags.width, string_len, 0);
     else if (flags.precision == 0)
-        len += ft_fill_width(flags.width, 1, 0);
+        len += ft_fill_width(flags.width, string_len, 0);
     else
         len += ft_fill_width(flags.width, string_len, flags.zero);
     if (flags.minus == 0)
