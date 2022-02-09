@@ -25,5 +25,5 @@ int ft_printf(const char *, ...);
 -               The converted value is to be left adjusted.
 Precision('.')  Gives the minimum number of digits or chars to apear depending on given conversions.
                 Can be used with '*' to specify that the precision is given in the next argument
-Field width     An optional decimal digit string (with nonzero first digit) specifying a minimum field width
+Field width     An optional digit string (with nonzero first digit) specifying a minimum field width
 ```
