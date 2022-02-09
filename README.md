@@ -27,3 +27,19 @@ Precision('.')  Gives the minimum number of digits or chars to apear depending o
                 Can be used with '*' to specify that the precision is given in the next argument
 Field width     An optional digit string (with nonzero first digit) specifying a minimum field width
 ```
+
+##  Usage
+```
+git clone https://github.com/MeSugar/ft_printf.git
+cd ft_printf
+make
+```
+This will create libftprintf.a file. Then you need to include header file to your programm:
+```C
+#include "src/ft_printf.h"
+```
+I added a simple example.c file to test it. Simply run:
+```
+gcc example.c -L. -lft -o example
+./example
+```
