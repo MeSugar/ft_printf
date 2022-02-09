@@ -40,6 +40,6 @@ This will create libftprintf.a file. Then you need to include header file to you
 ```
 I added a simple example.c file to test it. Simply run:
 ```
-gcc example.c -L. -lft -o example
+gcc example.c -L. -lftprintf -o example
 ./example
 ```
