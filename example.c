@@ -3,6 +3,6 @@
 int main()
 {
   char str[] = "Hello wolrd!\n";
-  ft_printf(%s, str);
+  ft_printf("%s", str);
   return (0);
 }
