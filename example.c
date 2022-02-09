@@ -2,7 +2,7 @@
 
 int main()
 {
-  char str[] = "Hello wolrd!\n";
+  char str[] = "Hello world!\n";
   ft_printf("%s", str);
   return (0);
 }
